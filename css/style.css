@@ -1,0 +1,134 @@
+/* =========================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+========================================= */
+/* =========================================
+   ESTILO GLOBAL (Fundo e Texto)
+========================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  /* O fundo original que pediste */
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a); 
+  color: #f2f2f2;
+  min-height: 100vh; /* Garante que o fundo cubra a página toda */
+}
+
+/* Garante que o container não esconda o fundo */
+.container {
+  padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: #0b0b0b;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff8a00;
+}
+
+.nav-container {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background: #ff8a00;
+    color: #000;
+}
+/* Container para a tabela de níveis no menu */
+.nav-levels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+    gap: 10px;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #ff8a00;
+    border-radius: 8px;
+}
+
+.level-item {
+    text-align: center;
+    padding: 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    background: #222;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.level-item:hover {
+    background: #ff8a00;
+    color: #000;
+}
+/* Esconde o conteúdo por padrão */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 1;
+    border: 1px solid #ff8a00;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* Esta classe será adicionada pelo JavaScript ao clicar */
+.show {
+    display: block !important;
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #ff8a00);
+    -webkit-background-clip: text;
+    background-clip: text; /* Propriedade padrão */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
+    font-weight: 900;
+    display: inline-block; /* Importante para o clip funcionar bem */
+}
+
+/* Card de conteúdo com efeito de profundidade */
+.content-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 138, 0, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.content-card:hover {
+    border-color: #ff8a00;
+    box-shadow: 0 0 20px rgba(255, 138, 0, 0.1);
+}
+
+/* Listas personalizadas para guitarristas */
+.guitar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guitar-list li::before {
+    content: "🎸";
+    margin-right: 10px;
+}

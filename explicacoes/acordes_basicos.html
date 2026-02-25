@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Acordes Básicos - Guitarra Academy</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 20px;">
+            <div class="logo" style="font-weight: bold; color: #ff8a00; font-size: 1.2rem;">
+                🎸 Guitarra Academy
+            </div>
+            <div class="nav-links" style="display: flex; gap: 15px; align-items: center;">
+                <a href="../index.html" class="nav-link">Início</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link" onclick="toggleDropdown()">Níveis ▼</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="../niveis/iniciante.html">🟢 Iniciante</a>
+                        <a href="../niveis/intermedio.html">🟡 Intermédio</a>
+                        <a href="../niveis/avancado.html">🔴 Avançado</a>
+                    </div>
+                </div>
+                <a href="../escolhervideo.html" class="nav-link">Videos</a>
+                <a href="../area_aluno.html" class="nav-link">Área Aluno</a>
+                <div id="auth-button-container"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="color: #ff8a00; text-align: center; margin-bottom: 10px;">Acordes Básicos</h1>
+        <p style="text-align: center; color: #ccc; margin-bottom: 40px;">Vamos preparar os dedos para tocar "Dunas" dos GNR.</p>
+
+        <div class="card" style="margin-bottom: 30px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <img src="../imagens/Tablatura_acordes.png" style="width: 100%; border-radius: 10px; border: 2px solid #333;">
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #ff8a00; margin-top: 0;">1. Lendo a Tablatura de Acordes</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li>📏 <strong>Casas:</strong> Cada coluna de quadrados é uma casa da guitarra.</li>
+                    <li>🎸 <strong>Cordas:</strong> Cada linha horizontal é uma corda.</li>
+                    <li>✅ <strong>Círculos:</strong> Cordas que deves tocar.</li>
+                    <li>❌ <strong>X:</strong> Não toques nessa corda!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 30px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap-reverse;">
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #ff8a00; margin-top: 0;">2. Posicionamento dos Dedos</h3>
+                <p>Na mão esquerda, cada dedo tem um número que verás nos diagramas:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #111; padding: 15px; border-radius: 10px;">
+                    <span>☝️ <strong>1:</strong> Indicador</span>
+                    <span>🖕 <strong>2:</strong> Médio</span>
+                    <span>💍 <strong>3:</strong> Anelar</span>
+                    <span>👶 <strong>4:</strong> Mindinho</span>
+                </div>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">💡 O polegar fica atrás do braço para apoio.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <img src="../imagens/dedosguitarra.png" style="width: 100%; border-radius: 10px; filter: grayscale(0.5);">
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 50px 0 30px;">Dicionário de Acordes (Mão Esquerda)</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            
+            <div class="card" style="border-top: 4px solid #ff8a00;">
+                <h3 style="text-align: center;">Sol (G)</h3>
+                <p>🔹 Dedo 1: Casa 2, Corda 5</p>
+                <p>🔹 Dedo 2: Casa 3, Corda 6</p>
+                <p>🔹 Dedo 3: Casa 3, Corda 1</p>
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="../audios/acordeG.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="card" style="border-top: 4px solid #ff8a00;">
+                <h3 style="text-align: center;">Mi Menor (Em)</h3>
+                <p>🔹 Dedo 1: Casa 2, Corda 5</p>
+                <p>🔹 Dedo 2: Casa 2, Corda 4</p>
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="../audios/acordeEm.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="card" style="border-top: 4px solid #ff8a00;">
+                <h3 style="text-align: center;">Dó (C)</h3>
+                <p>🔹 Dedo 1: Casa 1, Corda 2</p>
+                <p>🔹 Dedo 2: Casa 2, Corda 4</p>
+                <p>🔹 Dedo 3: Casa 3, Corda 5</p>
+                <p style="color: #ff4747; font-size: 0.8rem;">⚠️ Abafar a 6ª corda</p>
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="../audios/acordeC.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="card" style="border-top: 4px solid #ff8a00;">
+                <h3 style="text-align: center;">Ré (D)</h3>
+                <p>🔹 Dedo 1: Casa 2, Corda 3</p>
+                <p>🔹 Dedo 2: Casa 2, Corda 1</p>
+                <p>🔹 Dedo 3: Casa 3, Corda 2</p>
+                <p style="color: #ff4747; font-size: 0.8rem;">⚠️ Não tocar 5ª e 6ª cordas</p>
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="../audios/acordeD.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; padding: 40px; background: rgba(255,138,0,0.1); border-radius: 20px; text-align: center; border: 1px dashed #ff8a00;">
+            <h3>Próximo Passo: O Ritmo!</h3>
+            <p>Já consegues mudar entre estes acordes sem parar? Se sim, estás pronto.</p>
+            <a href="ritmos.html" class="btn" style="text-decoration: none; display: inline-block; margin-top: 20px; padding: 15px 40px;">
+                Ir para Aula de Ritmos →
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+          if (!event.target.matches('.nav-link')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
